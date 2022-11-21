@@ -1,6 +1,5 @@
 package curso;
 
-import java.util.Scanner;
 import javax.swing.JOptionPane;
 import java.util.Arrays;
 
@@ -10,12 +9,25 @@ public class Challenge1 {
 		// TODO Auto-generated method stub
 
 		//2.A
-		/*
+		
 		String option;
-		String textstring = " ";
 		
 		option = JOptionPane.showInputDialog("Please enter the type of the numeric string (A=54 or B=08)");
+						
+		System.out.println("Generated text-type numeric string: " + punto1(option));
 		
+		//2.B
+		
+		String entry;
+				
+		entry = JOptionPane.showInputDialog("Please enter a string value ");
+		System.out.println(punto2(entry));
+	
+	}
+
+	
+	public static String punto1(String option){
+		String textstring=null;
 		if (option.contentEquals("A")) {
 			textstring = "54";
 			for (int i=0;i<8;i++) {
@@ -31,12 +43,13 @@ public class Challenge1 {
 		else {
 			System.out.println("Please enter A or B");
 		}
+		return textstring;
 		
-		System.out.println("Generated text-type numeric string: " + textstring);
-		*/
-		//2.B
-		
-		String entry;
+	}
+	
+	public static boolean punto2(String entry) {
+		//String entry;
+		boolean status;
 		
 		/* If I want to input the list values
 		
@@ -50,17 +63,14 @@ public class Challenge1 {
 			System.out.println("Registered string: " + List[i]);
 		}
 		*/
-		String [] List = {"Blue", "Red", "Yellow", "Green", "Black", "White"};
 		
-		entry = JOptionPane.showInputDialog("Please enter a string value ");
-
+		String [] List = {"Blue", "Red", "Yellow", "Green", "Black", "White"};
 		if (Arrays.asList(List).contains(entry)==true) { 
-			System.out.println(false);
+			status = false;
 		}
 		else {
-			System.out.println(true);
+			status = true;
 		}
-	
+		return status;
 	}
-
 }
